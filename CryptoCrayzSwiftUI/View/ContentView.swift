@@ -30,12 +30,16 @@ struct ContentView: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .foregroundColor(Color.black)
                 }.padding(2)
-                    
+
             }.navigationTitle("CryptoCrayz")
 
-        }.onAppear() {
-            self.cryptoListViewModel.downloadCryptos(url: URL(string: "https://raw.githubusercontent.com/atilsamancioglu/K21-JSONDataSet/master/crypto.json")!)
+        }.task {
+            await self.cryptoListViewModel.downloadCryptosAsync(url: URL(string: "https://raw.githubusercontent.com/atilsamancioglu/K21-JSONDataSet/master/crypto.json")!)
         }
+
+        /*.onAppear() {
+            self.cryptoListViewModel.downloadCryptos(url: URL(string: "https://raw.githubusercontent.com/atilsamancioglu/K21-JSONDataSet/master/crypto.json")!)
+        }*/
     }
 }
 

@@ -17,6 +17,17 @@ enum NetworkError: Error {
 
 class WebService {
 
+    func downloadCurreciensAsync(url: URL) async throws -> [Crypto] {
+
+        let (data, _) = try await URLSession.shared.data(from: url)
+
+        if let cryptos = try? JSONDecoder().decode([Crypto].self, from: data) {
+            return cryptos
+        } else {
+            return []
+        }
+    }
+
 
     func downloadCurreciens(url: URL, completion: @escaping (Result<[Crypto], NetworkError>) -> Void) {
 
