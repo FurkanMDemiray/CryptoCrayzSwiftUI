@@ -11,6 +11,9 @@
 		DDFE92762B40AE7F00C5FD6F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFE92752B40AE7F00C5FD6F /* ContentView.swift */; };
 		DDFE92782B40AE8000C5FD6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDFE92772B40AE8000C5FD6F /* Assets.xcassets */; };
 		DDFE927B2B40AE8000C5FD6F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDFE927A2B40AE8000C5FD6F /* Preview Assets.xcassets */; };
+		DDFE92822B40AED600C5FD6F /* CryptoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFE92812B40AED600C5FD6F /* CryptoModel.swift */; };
+		DDFE92882B41A00600C5FD6F /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFE92872B41A00600C5FD6F /* WebService.swift */; };
+		DDFE928A2B41A41B00C5FD6F /* CryptoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFE92892B41A41B00C5FD6F /* CryptoViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		DDFE92752B40AE7F00C5FD6F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DDFE92772B40AE8000C5FD6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDFE927A2B40AE8000C5FD6F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DDFE92812B40AED600C5FD6F /* CryptoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoModel.swift; sourceTree = "<group>"; };
+		DDFE92872B41A00600C5FD6F /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		DDFE92892B41A41B00C5FD6F /* CryptoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +57,10 @@
 		DDFE92722B40AE7F00C5FD6F /* CryptoCrayzSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				DDFE92732B40AE7F00C5FD6F /* CryptoCrayzSwiftUIApp.swift */,
-				DDFE92752B40AE7F00C5FD6F /* ContentView.swift */,
+				DDFE92862B419EDF00C5FD6F /* Service */,
+				DDFE92852B419ED900C5FD6F /* ViewModel */,
+				DDFE92842B419ED300C5FD6F /* View */,
+				DDFE92832B419ECB00C5FD6F /* Model */,
 				DDFE92772B40AE8000C5FD6F /* Assets.xcassets */,
 				DDFE92792B40AE8000C5FD6F /* Preview Content */,
 			);
@@ -65,6 +73,39 @@
 				DDFE927A2B40AE8000C5FD6F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DDFE92832B419ECB00C5FD6F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DDFE92812B40AED600C5FD6F /* CryptoModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DDFE92842B419ED300C5FD6F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DDFE92732B40AE7F00C5FD6F /* CryptoCrayzSwiftUIApp.swift */,
+				DDFE92752B40AE7F00C5FD6F /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DDFE92852B419ED900C5FD6F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DDFE92892B41A41B00C5FD6F /* CryptoViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DDFE92862B419EDF00C5FD6F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				DDFE92872B41A00600C5FD6F /* WebService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +178,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDFE92822B40AED600C5FD6F /* CryptoModel.swift in Sources */,
 				DDFE92762B40AE7F00C5FD6F /* ContentView.swift in Sources */,
+				DDFE92882B41A00600C5FD6F /* WebService.swift in Sources */,
 				DDFE92742B40AE7F00C5FD6F /* CryptoCrayzSwiftUIApp.swift in Sources */,
+				DDFE928A2B41A41B00C5FD6F /* CryptoViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

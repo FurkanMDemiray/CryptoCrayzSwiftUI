@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+
+    var cryptoList = [Crypto]()
+
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        List(cryptoList) { crypto in
+            Text(crypto.currency)
         }
-        .padding()
     }
 }
 
