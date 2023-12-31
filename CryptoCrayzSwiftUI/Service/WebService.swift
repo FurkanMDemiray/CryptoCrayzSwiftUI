@@ -17,6 +17,25 @@ enum NetworkError: Error {
 
 class WebService {
 
+
+    // normal bir fonksiyonu async hale çevirerek kullanma
+    func downloadCurrenciesContinuation(url: URL) async throws -> [Crypto] {
+        //this will allow to resume from the suspended state
+        try await withCheckedThrowingContinuation { continuation in
+            downloadCurreciens(url: url) { result in
+                switch result {
+                case .success(let cryptos):
+                    continuation.resume(returning: cryptos ?? [])
+
+                case .failure(let error):
+                    continuation.resume(throwing: error)
+                }
+            }
+        }
+    }
+
+
+
     func downloadCurreciensAsync(url: URL) async throws -> [Crypto] {
 
         let (data, _) = try await URLSession.shared.data(from: url)
